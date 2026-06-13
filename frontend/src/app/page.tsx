@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Video, User, HeadphonesIcon } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const router = useRouter();
@@ -32,12 +33,12 @@ export default function Home() {
               <HeadphonesIcon className="w-6 h-6 text-emerald-400" />
               <h2 className="text-xl font-semibold">Support Agents</h2>
             </div>
-            <button
-              onClick={loginAsAgent}
-              className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
+            <Link
+              href="/dashboard"
+              className="block text-center w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
             >
               Login to Dashboard
-            </button>
+            </Link>
           </div>
 
           <div className="relative">

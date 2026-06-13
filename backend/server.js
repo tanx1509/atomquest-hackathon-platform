@@ -221,6 +221,7 @@ io.on('connection', (socket) => {
 });
 
 app.get('/api/health', (req, res) => res.send('OK'));
+app.get('/', (req, res) => res.send('AtomQuest Backend is running. Please open the frontend at http://localhost:3000'));
 
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {

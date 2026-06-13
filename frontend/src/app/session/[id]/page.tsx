@@ -81,6 +81,7 @@ export default function SessionRoom({ params }: { params: { id: string } }) {
     });
 
     return () => {
+      socket.removeAllListeners();
       socket.disconnect();
       localStream.current?.getTracks().forEach(t => t.stop());
     };
